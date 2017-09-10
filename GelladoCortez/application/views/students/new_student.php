@@ -11,7 +11,7 @@
 			<a href="view" class=""> STUDENTS </a> </br>
 			<a href="" class=""> COURSES </a>
 		</div>
-		<div class="col-md-8 contents">
+		<div class="col-md-8 contents tbleft">
 			<p class="lead">Add New Student</p>
 			<form role="form" class="" method="post">
 				

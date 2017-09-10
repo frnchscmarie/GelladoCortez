@@ -12,7 +12,7 @@
 				<a href="" class=""> COURSES </a>
 				
 		</div>
-		<div class="col-md-8 contents">
+		<div class="col-md-8 contents tbleft">
 			<table class="table table-striped table-hover table-condensed table-responsive">
 				<thead>
 					<tr>
