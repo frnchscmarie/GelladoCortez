@@ -9,7 +9,7 @@
 	<div class="student-picture">
 		<img src="<?php echo base_url('assets/images/koala.jpg'); ?>" alt="Picture" height="100" />
 	</div>
-	<div class="student-profile">
+	<div class="student-profile tbleft">
 		<p><b>ID No: </b><?php echo $student[0]['idno']; ?></p>
 		<p><b>Name: </b><?php echo $student[0]['lname'].', '.$student[0]['fname'].' '.$student[0]['mname']; ?></p>
 		<p><b>Course: </b><?php echo $student[0]['course']; ?></p>

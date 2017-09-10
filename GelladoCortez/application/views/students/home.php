@@ -12,7 +12,7 @@
 				<a href="" class=""> COURSES </a> 
 	
 		</div>
-		<div class="col-sm-4 contents tbleft">
+		<div class="col-sm-4 contents tbleft tbleft">
 		<h1>WELCOME TO SMS!</h1>
 			<table class="table table-striped table-hover table-condensed table-responsive table-bordered text-justify">
 				<thead>
