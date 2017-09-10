@@ -1,0 +1,6 @@
+/* mybootstrap.css */
+
+.container { width: 1000px; }
+.header, .footer { background-color: yellow; }
+.contents { min-height: 551px; }
+.tbleft{border-left: 2px solid black;}
