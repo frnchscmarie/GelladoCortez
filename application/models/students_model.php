@@ -3,13 +3,20 @@
 class Students_model extends CI_Model {
     
 	private $table = "students";
+	private $table2 = "course";
 	
-	public function create($data){
+	public function create($data)
+	{
 		$this->db->insert($this->table, $data);
 		return TRUE;	
 	}
-	
-	public function read($condition=null){
+	public function createcourse($data)
+	{
+		$this->db->insert($this->table2, $data);
+		return TRUE;	
+	}
+	public function read($condition=null)
+	{
 		
 		// SELECT * FROM students
 		
@@ -23,6 +30,20 @@ class Students_model extends CI_Model {
 		
 		// $this->db->join('table2','table1.key=table2.fk','inner');
 		// $this->db->order_by('field_name');
+		
+		if( isset($condition) ) $this->db->where($condition);
+		
+		$query=$this->db->get();
+
+		return $query->result_array();		
+	}
+	public function readcourse($condition=null)
+	{
+		
+		// SELECT * FROM course
+		
+		$this->db->select('*');
+		$this->db->from($this->table2);
 		
 		if( isset($condition) ) $this->db->where($condition);
 		

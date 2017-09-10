@@ -97,13 +97,6 @@ class Boots extends CI_Controller {
 			
 	}
 
-	public function modal()
-	{
-		$header_data['title'] = "Add New Student";	
-		$this->load->view('include/header',$header_data);	
-		$this->load->view('students/modal');
-		$this->load->view('include/footer');		
-	}
 	public function view(){	
 		// echo "CI and Bootstrap";
 		
@@ -134,4 +127,34 @@ class Boots extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}	
+	
+	public function viewcourse(){	
+		
+		$header_data['title'] = "STUDENT MANAGEMENT SYSTEM";
+	
+		
+		$condition = array('course'=>'BSIT');
+		
+		$rs = $this->course->read($condition);
+
+		foreach($rs as $r){
+			$info = array(
+						'cid' => $r['cid'],
+						'cname' => $r['cname'],
+						'cdes' => $r['cdes'],		
+						);
+			$students[] = $info;
+		}
+		
+		$data['students'] = $students;
+		
+		$this->load->view('include/header',$header_data);
+		$this->load->view('students/viewcourse', $data);
+		$this->load->view('include/footer');
+		
+	}	
+	
+	
+	
+	
 }
