@@ -12,7 +12,7 @@
 				<a href="" class=""> COURSES </a>
 				
 		</div>
-		<div class="col-md-8 contents tbleft">
+		<div class="col-md-8 contents">
 			<table class="table table-striped table-hover table-condensed table-responsive">
 				<thead>
 					<tr>
@@ -23,7 +23,7 @@
 				</thead>
 				<tbody>
 				<?php
-				foreach($students as $s){
+				foreach($course as $s){
 					echo '	<tr>	
 								<td>'.$s['cid'].'</td>
 								<td>'.$s['cname'].'</td>

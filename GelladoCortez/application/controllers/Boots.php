@@ -133,9 +133,9 @@ class Boots extends CI_Controller {
 		$header_data['title'] = "STUDENT MANAGEMENT SYSTEM";
 	
 		
-		$condition = array('course'=>'BSIT');
+		//$condition = array('course'=>'BSIT');
 		
-		$rs = $this->course->read($condition);
+		$rs = $this->Students->readcourse();
 
 		foreach($rs as $r){
 			$info = array(
@@ -143,10 +143,10 @@ class Boots extends CI_Controller {
 						'cname' => $r['cname'],
 						'cdes' => $r['cdes'],		
 						);
-			$students[] = $info;
+			$course[] = $info;
 		}
 		
-		$data['students'] = $students;
+		$data['course'] = $course;
 		
 		$this->load->view('include/header',$header_data);
 		$this->load->view('students/viewcourse', $data);
