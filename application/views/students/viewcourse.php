@@ -23,7 +23,7 @@
 				</thead>
 				<tbody>
 				<?php
-				foreach($students as $s){
+				foreach($course as $s){
 					echo '	<tr>	
 								<td>'.$s['cid'].'</td>
 								<td>'.$s['cname'].'</td>

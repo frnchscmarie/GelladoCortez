@@ -9,7 +9,7 @@
 			<p class="lead">Menu</p>
 				<a href="" class=""> HOME </a> </br>
 				<a href="boots/view" class=""> STUDENTS </a> </br>
-				<a href="" class=""> COURSES </a> 
+				<a href="boots/viewcourse" class=""> COURSES </a> 
 	
 		</div>
 		<div class="col-sm-4 contents tbleft">
