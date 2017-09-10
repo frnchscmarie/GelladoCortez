@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2017 at 10:45 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 5.6.31
+-- Generation Time: Sep 10, 2017 at 05:59 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -21,8 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `students`
 --
-CREATE DATABASE IF NOT EXISTS `students` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `students`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course`
+--
+
+CREATE TABLE `course` (
+  `cid` varchar(20) NOT NULL,
+  `cname` varchar(50) NOT NULL,
+  `cdes` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course`
+--
+
+INSERT INTO `course` (`cid`, `cname`, `cdes`) VALUES
+('IT 212', 'S.A.D', 'System Analysis and Design'),
+('IT 212-L', 'S.A.D', 'System Analysis and Design Lab');
 
 -- --------------------------------------------------------
 
@@ -30,35 +46,46 @@ USE `students`;
 -- Table structure for table `students`
 --
 
-DROP TABLE IF EXISTS `students`;
 CREATE TABLE `students` (
   `idno` varchar(10) NOT NULL,
   `lname` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
   `mname` varchar(50) NOT NULL,
   `course` varchar(50) NOT NULL,
-  `sex` varchar(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `sex` varchar(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`idno`, `lname`, `fname`, `mname`, `course`, `sex`) VALUES
-('12-037-001', 'Magalpok', 'Gorgonia', 'Pedro', 'BSIT', 'F'),
-('12-037-002', 'Puth', 'Sue', 'Ramirez', 'BSIT', 'F'),
-('12-037-003', 'Bermudo', 'Francisco', 'M', 'BSCS', 'M');
+('15-037-056', 'Armandona', 'Maria', 'M.', 'BSIT', 'F'),
+('15-037-046', 'Flormata', 'Allysa', 'C.', 'BSIT', 'F'),
+('15-037-069', 'Bello', 'Alexandra', 'B.', 'BSIT', 'F'),
+('15-037-080', 'Benusa', 'Noel', 'D.', 'BSIT', 'M'),
+('15-037-011', 'Gellado', 'Janelyn Ann', 'C.', 'BSIT', 'F'),
+('15-037-044', 'Cortez', 'Franchesca Marie', 'C.', 'BSIT', 'F'),
+('15-037-022', 'Orias', 'Al Francis', 'P.', 'BSIT', 'M'),
+('15-037-048', 'Cortez', 'Olivia Marie', 'C.', 'BSIT', 'F'),
+('15-037-123', 'World', 'Hello', 'C.', 'BSIT', 'M'),
+('15-037-088', 'Caridad', 'Brixx', 'M.', 'BSIT', 'M');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `course`
+--
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`cid`);
+
+--
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`idno`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
